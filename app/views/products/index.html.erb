@@ -1,9 +1,9 @@
 <ul>
   <%= cart.each do |product| %>
-    <li><%= product %>
-      <%= form_for product, url: products_add_path do |f| %>
-        <%= f.submit "add to cart" %>
-      <% end %>
-    </li>
+    <li><%= product %></li>
   <% end %>
 </ul>
+
+<%= form_for product, url: products_add_path do |f| %>
+  <%= f.submit "add to cart" %>
+<% end %>
